@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Bellota|Ubuntu+Mono|Open+Sans|Ubuntu|Raleway|Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bellota|Ubuntu+Mono|Open+Sans|Ubuntu|Raleway|Space+Mono|Kaushan+Script&display=swap");
 
 .nav-cabinet-menu {
   display: none;
+}
+
+table {
+  color: black;
 }
 
 @media only screen and (max-width: 650px) {

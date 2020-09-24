@@ -10,6 +10,9 @@ import {
   faMoon,
   faCog,
   faPepperHot,
+  faTachometerAlt,
+  faEdit,
+  faPalette,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
@@ -33,7 +36,10 @@ library.add(
   faPepperHot,
   faTwitter,
   faFacebook,
-  faGithubAlt
+  faGithubAlt,
+  faTachometerAlt,
+  faEdit,
+  faPalette
 );
 
 const httpLink = new HttpLink({

@@ -28,7 +28,6 @@ const navHeight = "5rem";
 export default function Layout({
   children,
   title = "This is the default title",
-  docs,
 }) {
   const { isCabinet, toggleCabinet } = useCabinet();
   const { toggleTheme, themeString, lightTheme, theme } = useTheme();
@@ -84,17 +83,23 @@ export default function Layout({
                 size="xl"
                 onClick={toggleCabinet}
                 color="red6"
-                // hvrColor="red8"
+                pointer
                 hvrBg="gray2"
                 p="0.2rem"
               >
-                <FontAwesomeIcon
-                  icon="pepper-hot"
-                  size="lg"
-                  // color={theme.colors.red6}
-                />
+                <FontAwesomeIcon icon="pepper-hot" size="lg" />
               </Text>
-              <Text ml="1rem" size="xl" color="red6">
+              <Text
+                as="a"
+                href="/"
+                ml="1rem"
+                size="2xl"
+                color="red6"
+                hvrColor="red6"
+                // hvrColor={themeString === "light" ? colors.red8 : colors.red4}
+                font="Kaushan Script"
+                pointer
+              >
                 Sriracha
               </Text>
             </Flex>
@@ -111,6 +116,7 @@ export default function Layout({
                 radius="0.5rem"
                 bg="none"
                 hvrBg="gray2"
+                pointer
               >
                 <FontAwesomeIcon
                   icon={["fab", "github-alt"]}
@@ -129,6 +135,7 @@ export default function Layout({
                 radius="0.5rem"
                 bg="none"
                 hvrBg="gray2"
+                pointer
               >
                 {themeString === "dark" ? (
                   <FontAwesomeIcon icon="sun" color={colors.amber3} size="lg" />

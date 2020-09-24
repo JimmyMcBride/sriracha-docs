@@ -3,7 +3,7 @@ import { Box, Text, Flex } from "sriracha-ui";
 import NavLink from "./NavLink";
 import Link from "next/link";
 
-export default function NavLinks({ docs }) {
+export default function NavLinks({ docs, comps }) {
   // console.log("docs", docs);
   return (
     <>
@@ -21,13 +21,17 @@ export default function NavLinks({ docs }) {
       {docs?.map((link) => (
         <React.Fragment key={link.slug}>
           <NavLink link={link} type="docs" />
-          {/* <Box w="2rem" /> */}
         </React.Fragment>
       ))}
       <Text color="gray5" size="xl" mb="1rem">
         Components
       </Text>
       <Box stretch bg="gray5" h="0.1rem" mb="1.6rem" />
+      {comps?.map((link) => (
+        <React.Fragment key={link.slug}>
+          <NavLink link={link} type="components" />
+        </React.Fragment>
+      ))}
     </>
   );
 }

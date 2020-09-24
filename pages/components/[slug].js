@@ -1,13 +1,10 @@
 import React from "react";
 import Layout from "../../components/Layout";
-// import fs from "fs";
 import axios from "axios";
-import { Card, Button } from "sriracha-ui";
+import { Card, Button, Box, Flex } from "sriracha-ui";
 import HighlightedMarkdown from "../../components/HighlightedMarkdown";
-// import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 export default function DocsSlug({ htmlString }) {
-  // console.log("data", data);
   return (
     <Layout>
       <Card w="96%" maxW={9} tal shade>
@@ -15,6 +12,8 @@ export default function DocsSlug({ htmlString }) {
           options={{
             overrides: {
               Button: { component: Button },
+              Box: { component: Box },
+              Flex: { component: Flex },
             },
           }}
         >
@@ -63,7 +62,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
   return {
     props: {
       htmlString: data.body,
-      // data,
     },
   };
 };
