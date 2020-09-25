@@ -71,14 +71,9 @@ export default function Layout({
         <meta name="theme-color" content="#fafafa" />
       </Head>
       <header>
-        <NavBar w="100%" bg="gray0" drape shadow={3} radius="0 0 0.4rem 0.4rem">
-          <Flex w="100%" jcb aic h={navHeight}>
-            <Flex
-              // className="nav-cabinet-menu"
-              m="0 0 0 2rem"
-              pointer
-              aic
-            >
+        <NavBar bg="gray0" drape shadow={3} radius="0 0 0.4rem 0.4rem">
+          <Flex stretch jcb aic h={navHeight}>
+            <Flex ml="2rem" pointer aic>
               <Text
                 size="xl"
                 onClick={toggleCabinet}
@@ -96,7 +91,6 @@ export default function Layout({
                 size="2xl"
                 color="red6"
                 hvrColor="red6"
-                // hvrColor={themeString === "light" ? colors.red8 : colors.red4}
                 font="Kaushan Script"
                 pointer
               >
@@ -107,7 +101,6 @@ export default function Layout({
               <Flex
                 as="a"
                 href="https://github.com/Sriracha-UI/sriracha"
-                onClick={toggleTheme}
                 jcv
                 aic
                 p={1}

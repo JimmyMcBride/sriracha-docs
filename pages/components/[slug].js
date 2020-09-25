@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import axios from "axios";
-import { Card, Button, Box, Flex } from "sriracha-ui";
+import { Card, Button, Text, Box, Flex, Input, Form } from "sriracha-ui";
 import HighlightedMarkdown from "../../components/HighlightedMarkdown";
 
 export default function DocsSlug({ htmlString }) {
@@ -14,6 +14,10 @@ export default function DocsSlug({ htmlString }) {
               Button: { component: Button },
               Box: { component: Box },
               Flex: { component: Flex },
+              Input: { component: Input },
+              Form: { component: Form },
+              Card: { component: Card },
+              Text: { component: Text },
             },
           }}
         >
